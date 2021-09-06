@@ -1,21 +1,25 @@
-import React, { ReactNode } from "react";
-import logo from "./logo.svg";
-import "./App.css";
-import Offers from "./views/Offers/Offers";
-import { ChakraProvider, Switch } from "@chakra-ui/react";
-import { Route, BrowserRouter as Router } from "react-router-dom";
+import { Button, ChakraProvider } from "@chakra-ui/react";
+import React from "react";
+import { BrowserRouter as Router, Route } from "react-router-dom";
+import AddOffer from "./views/AddOffer/AddOffer";
 import AddProduct from "./views/AddProduct/AddProduct";
+import Offers from "./views/Offers/Offers";
 
 function App() {
   return (
     <Router>
       <ChakraProvider>
         <Route exact path="/">
+          <Button mb={5} colorScheme="blue">
+            Add offer
+          </Button>
           <Offers />
         </Route>
         <Route path="/AddProduct">
           <AddProduct />
+          <AddOffer />
         </Route>
+        <Route path="/addOffer"></Route>
       </ChakraProvider>
     </Router>
   );
