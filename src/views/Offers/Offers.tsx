@@ -15,9 +15,11 @@ function Offers() {
           error: null,
           isLoaded: true,
           data: result.map((item: any) => ({
-            title: item.productDto.name,
-            desc: item.productDto.author,
-            src: item.productDto.url,
+            title: item.name,
+            desc: item.author,
+            src: item.url,
+            description: item.description,
+            offerPrice: item.offerPrice,
           })),
         });
       }); //cwany zapis
@@ -30,9 +32,16 @@ function Offers() {
         <Stack spacing={8}>
           {data.data.length > 0 &&
             data.data.map(
-              (item: { title: string; desc: string; src: string }, index) => (
-                <Offer key={index} {...item} />
-              )
+              (
+                item: {
+                  title: string;
+                  desc: string;
+                  src: string;
+                  description: string;
+                  offerPrice: number;
+                },
+                index
+              ) => <Offer key={index} {...item} />
             )}
         </Stack>
       </Box>

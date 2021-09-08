@@ -15,8 +15,7 @@ function App() {
           </Button>
           <Offers />
         </Route>
-        <Route path="/AddProduct">
-          <AddProduct />
+        <Route path="/AddOffer">
           <AddOffer />
         </Route>
         <Route path="/addOffer"></Route>
