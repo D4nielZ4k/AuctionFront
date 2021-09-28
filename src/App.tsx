@@ -2,7 +2,6 @@ import { Button, ChakraProvider } from "@chakra-ui/react";
 import React from "react";
 import { BrowserRouter as Router, Route } from "react-router-dom";
 import AddOffer from "./views/AddOffer/AddOffer";
-import AddProduct from "./views/AddProduct/AddProduct";
 import Offers from "./views/Offers/Offers";
 
 function App() {
