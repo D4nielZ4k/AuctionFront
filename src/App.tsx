@@ -2,7 +2,9 @@ import { Button, ChakraProvider } from "@chakra-ui/react";
 import React from "react";
 import { BrowserRouter as Router, Route } from "react-router-dom";
 import AddOffer from "./views/AddOffer/AddOffer";
+import AddUser from "./views/AddUsers/AddUser";
 import Offers from "./views/Offers/Offers";
+import SigIn from "./views/SigIn/SigIn";
 
 function App() {
   return (
@@ -14,10 +16,15 @@ function App() {
           </Button>
           <Offers />
         </Route>
-        <Route path="/AddOffer">
+        <Route path="/addOffer">
           <AddOffer />
         </Route>
-        <Route path="/addOffer"></Route>
+        <Route path="/registration">
+          <AddUser />
+        </Route>
+        <Route path="/login">
+          <SigIn />
+        </Route>
       </ChakraProvider>
     </Router>
   );
